@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Redirecting…</title>
+
+  <!-- Meta refresh (fallback) - 0 detik = langsung -->
+  <meta http-equiv="refresh" content="0;url=https://example.com">
+
+  <script>
+    // Ganti URL di bawah dengan link tujuanmu
+    const targetUrl = "https://chat.whatsapp.com/D1FlvXrteOKF3pJQhgCjs1?mode=ems_copy_t";
+
+    // Cara yang paling cepat & bersih: replace() agar tidak tersimpan di history
+    window.location.replace(targetUrl);
+
+    // Jika ingin membuka di tab baru, pakai:
+    // window.open(targetUrl, "_blank");
+  </script>
+
+  <style>
+    /* Tampilan fallback singkat bila redirect gagal atau pengguna mematikan JS */
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background: #f6f7fb;
+      color: #111;
+    }
+    .box { text-align:center; padding:20px; border-radius:10px; box-shadow:0 4px 16px rgba(0,0,0,0.08); background:white;}
+    a { color: #0b6efd; text-decoration: none; font-weight:600; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <p>Jika kamu tidak diarahkan otomatis, klik link ini:</p>
+    <p><a id="fallback" href="https://example.com">Pergi ke tujuan</a></p>
+  </div>
+
+  <noscript>
+    <style> .box{display:block;} </style>
+    <!-- Jika JS dimatikan, meta-refresh masih bekerja; ini hanya fallback visual -->
+    <div style="display:none" aria-hidden="true"></div>
+  </noscript>
+</body>
+</html>
