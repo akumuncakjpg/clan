@@ -1,50 +1,98 @@
-<!doctype html>
-<html lang="id">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Redirecting…</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clan CoC</title>
 
-  <!-- Meta refresh (fallback) - 0 detik = langsung -->
-  <meta http-equiv="refresh" content="0;url=https://example.com">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("uploads/bg.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: #fff;
+            text-align: center;
+        }
 
-  <script>
-    // Ganti URL di bawah dengan link tujuanmu
-    const targetUrl = "https://chat.whatsapp.com/D1FlvXrteOKF3pJQhgCjs1?mode=ems_copy_t";
+        .overlay {
+            background: rgba(0,0,0,0.55);
+            min-height: 100vh;
+            padding: 20px;
+        }
 
-    // Cara yang paling cepat & bersih: replace() agar tidak tersimpan di history
-    window.location.replace(targetUrl);
+        .clan-logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 20px;
+            border: 3px solid gold;
+            box-shadow: 0 0 15px gold;
+            margin-top: 20px;
+        }
 
-    // Jika ingin membuka di tab baru, pakai:
-    // window.open(targetUrl, "_blank");
-  </script>
+        .clan-name {
+            font-size: 32px;
+            font-weight: bold;
+            margin-top: 10px;
+            text-shadow: 2px 2px 8px black;
+        }
 
-  <style>
-    /* Tampilan fallback singkat bila redirect gagal atau pengguna mematikan JS */
-    body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      background: #f6f7fb;
-      color: #111;
-    }
-    .box { text-align:center; padding:20px; border-radius:10px; box-shadow:0 4px 16px rgba(0,0,0,0.08); background:white;}
-    a { color: #0b6efd; text-decoration: none; font-weight:600; }
-  </style>
+        nav {
+            margin-top: 30px;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 25px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 12px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            border: 1px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(6px);
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.35);
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-  <div class="box">
-    <p>Jika kamu tidak diarahkan otomatis, klik link ini:</p>
-    <p><a id="fallback" href="https://example.com">Pergi ke tujuan</a></p>
-  </div>
 
-  <noscript>
-    <style> .box{display:block;} </style>
-    <!-- Jika JS dimatikan, meta-refresh masih bekerja; ini hanya fallback visual -->
-    <div style="display:none" aria-hidden="true"></div>
-  </noscript>
+    <div class="overlay">
+
+        <img src="uploads/logo.png" class="clan-logo" alt="Clan Logo">
+        <div class="clan-name">WKWKWK CLAN</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="member.html">Member</a>
+            <a href="info.html">Info Clan</a>
+        </nav>
+<h3>📜 Clan Rules</h3>
+        
+            <li>Saling Donasi</li>
+            <li>Aktif clan games</li>
+            <li>No toxic</li>
+            <li>Serang target sesuai arahan</li>
+        
+            <div class="card">
+    <h3>📞 Grup WhatsApp</h3>
+    <a href="https://chat.whatsapp.com/D1FlvXrteOKF3pJQhgCjs1?mode=ems_copy_t" 
+       style="color:#00d8ff; font-weight:600;" 
+       target="_blank">
+       👉 Gabung Grup WhatsApp
+    </a>
+</div>
+    </div>
+
+
 </body>
 </html>
